@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import {Employee} from './models/employee'
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-simple-crud';
+  employeeArray : Employee[] = [
+    {id: 1, name: "Ryan", country: "USA"}, 
+    {id: 2, name: "Angelica", country: "USA"}, 
+    {id: 3, name: "Joe", country: "USA"}
+  ];
+
+  selectedEmployee: Employee = new Employee();
+
+
 }
